@@ -5,7 +5,9 @@ This project aims to create a map of the most frequently prefixs and suffixs use
 
 ## Tools needed
 
-OpenStreetMap, d3js
+* OpenStreetMap
+* [Osmapi](http://wiki.openstreetmap.org/wiki/PythonOsmApi): a Python class to communicate with OSM
+* d3js
 
 ## Inspiration
 
