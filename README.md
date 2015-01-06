@@ -1,4 +1,4 @@
-ker-ville-ac
+Kerville
 ============
 
 This project aims to create a map of the most frequently prefixs and suffixs used in the names of French cities.
