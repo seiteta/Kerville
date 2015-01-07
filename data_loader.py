@@ -1,11 +1,11 @@
-import OsmApi
-MyApi = OsmApi.OsmApi()
+import overpy
 
-for i in range(26686348,26686552):
-    node = MyApi.NodeGet(i)
-    if node is not None:
-        if 'tag' in node.keys():     
-            if 'place' in node['tag']:
-                place_type = node['tag']['place']
-                if place_type == 'city' or place_type == 'town' or place_type == 'village':
-                    print node['tag']['name']
+api = overpy.Overpass()
+
+result = api.query("""<osm-script>
+  <query type="node">
+    <has-kv k="place" v="city"/>
+    <bbox-query e="8" n="51" s="42" w="-5"/>   
+  </query>
+  <print/>
+</osm-script>""")
